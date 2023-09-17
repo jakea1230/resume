@@ -3,10 +3,114 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume of Jake Adams</title>
-    
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Title Class */
+        .title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Centered Container */
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        /* Inner Divs */
+        .inner-div {
+            width: 30%;
+            height: 150px;
+            margin: 0 1.5%;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: blue;
+            padding: 5px 10px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        nav a:active {
+            color: green;
+        }
+
+        nav a:visited {
+            color: purple;
+        }
+
+        /* Email Link */
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        /* Media Query */
+        @media only screen and (max-width: 575px) {
+            .inner-div {
+                float: none;
+                width: 90%;
+                margin: 20px auto; /* centering the divs */
+            }
+
+            nav {
+                height: 100px; /* Adjust the height as per your design requirement */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,19 +136,21 @@
     </nav>
 
     <!-- Email Link -->
-    <a href="jadams3@albany.edu">Contact Me</a>
+    <a href="mailto:jadams3@albany.edu">Contact Me</a> <!-- Added mailto: to make it functional -->
 
     <!-- Skills, Education, Experience -->
-    <h2>Skills</h2>
-    <p>Ambitious</p>
-	<p>Creative</p>
-	<p>Disciplined</p>
+    <div style="background-color: #fff; padding: 20px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); margin: 20px 10%; border-radius: 5px;">
+        <h2>Skills</h2>
+        <p>Ambitious</p>
+        <p>Creative</p>
+        <p>Disciplined</p>
 
-    <h2>Education</h2>
-    <p>Informatics - UAlbany</p>
+        <h2>Education</h2>
+        <p>Informatics - UAlbany</p>
 
-    <h2>Experience</h2>
-    <p>Rite Aid - Front Desk</p>
+        <h2>Experience</h2>
+        <p>Rite Aid - Front Desk</p>
+    </div>
 
 </body>
 
