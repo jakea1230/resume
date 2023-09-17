@@ -1,0 +1,65 @@
+/* For External CSS - save in a 'styles.css' file */
+
+/* Title Class */
+.title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+/* Centered Container */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Inner Divs */
+.inner-div {
+    width: 30%; /* Equal to 90% when all three are combined */
+    height: 150px;
+    margin: 0 1.5%;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav a:active {
+    color: green;
+}
+
+nav a:visited {
+    color: purple;
+}
+
+/* Media Query */
+@media only screen and (max-width: 575px) {
+    .inner-div {
+        float: none;
+        width: 90%;
+        margin: 20px auto; /* centering the divs */
+    }
+    nav {
+        height: 100px; /* Adjust the height as per your design requirement */
+    }
+}
