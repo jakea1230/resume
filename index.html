@@ -14,7 +14,6 @@
             padding: 0;
         }
 
-        /* Title Class */
         .title {
             text-align: center;
             font-size: 2.2em;
@@ -25,7 +24,6 @@
             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Centered Container */
         .centered-container {
             display: flex;
             justify-content: center;
@@ -33,7 +31,6 @@
             margin-top: 50px;
         }
 
-        /* Inner Divs */
         .inner-div {
             width: 30%;
             height: 150px;
@@ -82,7 +79,6 @@
             color: purple;
         }
 
-        /* Email Link */
         a {
             display: block;
             text-align: center;
@@ -103,43 +99,54 @@
             .inner-div {
                 float: none;
                 width: 90%;
-                margin: 20px auto; /* centering the divs */
+                margin: 20px auto; 
             }
 
             nav {
-                height: 100px; /* Adjust the height as per your design requirement */
+                height: 100px;
             }
+        }
+
+        /* Calculator Styles */
+        .calculator {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .calculator input,
+        .calculator button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Centered Div for Title -->
     <div class="title">
         Resume of Jake Adams
     </div>
 
-    <!-- Centered Div Container -->
     <div class="centered-container">
-        <!-- Three Centered Divs -->
         <div class="inner-div pink"></div>
         <div class="inner-div green"></div>
         <div class="inner-div yellow"></div>
     </div>
 
-    <!-- Links to other pages -->
     <nav>
         <a href="page1.html" title="Page 1">Page 1</a>
         <a href="https://www.albany.edu/cehc/programs/bs-informatics" title="Education">Page 2</a>
         <a href="https://www.riteaid.com/" title="Rite Aid">Page 3</a>
     </nav>
 
-    <!-- Email Link -->
-    <a href="mailto:jadams3@albany.edu">Contact Me</a> <!-- Added mailto: to make it functional -->
+    <a href="mailto:jadams3@albany.edu">Contact Me</a>
 
-    <!-- Skills, Education, Experience -->
-    <div style="background-color: #fff; padding: 20px; box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); margin: 20px 10%; border-radius: 5px;">
+    <div>
         <h2>Skills</h2>
         <p>Ambitious</p>
         <p>Creative</p>
@@ -151,6 +158,31 @@
         <h2>Experience</h2>
         <p>Rite Aid - Front Desk</p>
     </div>
+
+    <!-- Salary Calculator Section -->
+    <div class="calculator">
+        <h3>Salary Calculator</h3>
+        <label for="hourlyRate">Hourly Rate:</label>
+        <input type="number" id="hourlyRate" placeholder="Enter hourly rate">
+        <label for="hoursPerWeek">Hours per Week:</label>
+        <input type="number" id="hoursPerWeek" placeholder="Enter hours per week">
+        <button onclick="calculateSalary()">Calculate</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateSalary() {
+            const hourlyRate = parseFloat(document.getElementById("hourlyRate").value);
+            const hoursPerWeek = parseFloat(document.getElementById("hoursPerWeek").value);
+            
+            if(!isNaN(hourlyRate) && !isNaN(hoursPerWeek)) {
+                const annualSalary = hourlyRate * hoursPerWeek * 52;
+                document.getElementById("result").innerHTML = "Annual Salary: $" + annualSalary.toFixed(2);
+            } else {
+                document.getElementById("result").innerHTML = "Please enter valid numbers.";
+            }
+        }
+    </script>
 
 </body>
 
