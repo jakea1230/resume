@@ -184,6 +184,57 @@
         }
     </script>
 
+<div>
+        <h3>Work Experience</h3>
+
+        <!-- Job Duties for Job 1 -->
+        <h4>Job 1</h4>
+        <label for="dutiesCountJob1">Enter the number of duties you want to see:</label>
+        <input type="number" id="dutiesCountJob1">
+        <button onclick="displayJob1Duties()">Show Duties</button>
+        <div id="job1DutiesOutput"></div>
+
+        <!-- Job Duties for Job 2 -->
+        <h4>Job 2</h4>
+        <label for="dutiesCountJob2">Enter the number of duties you want to see:</label>
+        <input type="number" id="dutiesCountJob2">
+        <button onclick="displayJob2Duties()">Show Duties</button>
+        <div id="job2DutiesOutput"></div>
+    </div>
+
+    <script>
+        // Existing function
+        function calculateSalary() {
+            // ... existing content of this function ...
+        }
+
+        // New functions for displaying job duties
+
+        function displayJob1Duties() {
+            const dutiesJob1 = ["Duty A1", "Duty B1", "Duty C1", "Duty D1", "Duty E1"];
+            displayDuties("dutiesCountJob1", "job1DutiesOutput", dutiesJob1);
+        }
+
+        function displayJob2Duties() {
+            const dutiesJob2 = ["Duty A2", "Duty B2", "Duty C2", "Duty D2", "Duty E2"];
+            displayDuties("dutiesCountJob2", "job2DutiesOutput", dutiesJob2);
+        }
+
+        function displayDuties(inputId, outputId, dutiesArray) {
+            const numOfDuties = document.getElementById(inputId).value;
+            let startingIndex = numOfDuties - 1;
+            let output = "";
+
+            while (startingIndex >= 0) {
+                output += `<div class="job-duty">${dutiesArray[startingIndex]}</div>`;
+                startingIndex--;
+            }
+
+            document.getElementById(outputId).innerHTML = output;
+        }
+
+    </script>
+    
 </body>
 
 </html>
