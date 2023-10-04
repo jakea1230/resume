@@ -119,7 +119,7 @@
     </div>
 
     <nav>
-        <a href="page1.html" title="Page 1">Page 1</a>
+        <a href="https://en.wikipedia.org/wiki/Concession_stand" title="Page 1">Page 1</a>
         <a href="https://www.albany.edu/cehc/programs/bs-informatics" title="Education">Page 2</a>
         <a href="https://www.riteaid.com/" title="Rite Aid">Page 3</a>
     </nav>
@@ -167,15 +167,15 @@
 <div>
         <h3>Work Experience</h3>
 
-        <!-- Job Duties for Job 1 -->
-        <h4>Job 1</h4>
+        <!-- Job Duties for Front Desk Associate -->
+        <h4>Front Desk Associate</h4>
         <label for="dutiesCountJob1">Enter the number of duties you want to see:</label>
         <input type="number" id="dutiesCountJob1">
         <button onclick="displayJob1Duties()">Show Duties</button>
         <div id="job1DutiesOutput"></div>
 
-        <!-- Job Duties for Job 2 -->
-        <h4>Job 2</h4>
+        <!-- Job Duties for Concession Worker -->
+        <h4>Concession Worker</h4>
         <label for="dutiesCountJob2">Enter the number of duties you want to see:</label>
         <input type="number" id="dutiesCountJob2">
         <button onclick="displayJob2Duties()">Show Duties</button>
@@ -183,20 +183,16 @@
     </div>
 
     <script>
-        // Existing function
-        function calculateSalary() {
-            // ... existing content of this function ...
-        }
 
-        // New functions for displaying job duties
+        // Functions for displaying job duties
 
         function displayJob1Duties() {
-            const dutiesJob1 = ["Duty A1", "Duty B1", "Duty C1", "Duty D1", "Duty E1"];
+            const dutiesJob1 = ["Greet customers", "Handle payments", "Answer the phone", "Restock shelves", "Close and open store"];
             displayDuties("dutiesCountJob1", "job1DutiesOutput", dutiesJob1);
         }
 
         function displayJob2Duties() {
-            const dutiesJob2 = ["Duty A2", "Duty B2", "Duty C2", "Duty D2", "Duty E2"];
+            const dutiesJob2 = ["Cook food", "Preparte snacks", "Handle transactions", "Greet people", "Clean up"];
             displayDuties("dutiesCountJob2", "job2DutiesOutput", dutiesJob2);
         }
 
